@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,12 +26,12 @@ export default function Navbar() {
   const linkobj = [
     {
       destination: "/",
-      title: "HOME",
+      title: t("nav.home"),
     },
-    { destination: "/collections", title: "COLLECTIONS" },
-    { destination: "/why_auremet", title: "WHY AUREMET" },
-    { destination: "/about", title: "ABOUT" },
-    { destination: "/contact", title: "CONTACT" },
+    { destination: "/collections", title: t("nav.collections") },
+    { destination: "/why_auremet", title: t("nav.why_auremet") },
+    { destination: "/about", title: t("nav.about") },
+    { destination: "/contact", title: t("nav.contact") },
   ];
   return (
     <header
@@ -61,30 +65,34 @@ export default function Navbar() {
           </nav>
           {/* Desktop actions */}
           <div className="hidden lg:flex items-center gap-5">
+            <LanguageSwitcher />
             <Link
               to="/login"
               className="text-sm tracking-[2px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]"
             >
-              LOGIN
+              {t("nav.login")}
             </Link>
 
             <Link
               to="/collections"
               className="cursor-pointer rounded-full border-0 bg-[#b18a42] px-[25px] py-[15px] text-[14px] tracking-[2px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
             >
-              SHOP NOW
+              {t("nav.buy_now")}
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden rounded-md p-2 text-[#8d6a2b] hover:bg-[#efe7d9] transition-colors"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-          >
-            {open ? <FaTimes size={22} /> : <FaBars size={22} />}
-          </button>
+          <div className="flex gap-3 lg:hidden ">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setOpen(!open)}
+              className="lg:hidden rounded-md p-2 text-[#8d6a2b] hover:bg-[#efe7d9] transition-colors"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+              {open ? <FaTimes size={22} /> : <FaBars size={22} />}
+            </button>
+          </div>
         </div>
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden 

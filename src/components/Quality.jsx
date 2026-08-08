@@ -1,34 +1,39 @@
 import { Leaf, Sparkles, Shield, Feather } from "lucide-react";
-const default_quality_details = [
-  {
-    icon: Leaf,
-    name: "Premium Cotton",
-    description: "Soft, breathable Egyptian fabrics woven for lasting comfort.",
-  },
-  {
-    icon: Sparkles,
-    name: "Luxury Comfort",
-    description: "A hotel-quality sleeping experience, night after night.",
-  },
-  {
-    icon: Shield,
-    name: "Long Lasting",
-    description: "Engineered to soften with every wash for years to come.",
-  },
-  {
-    icon: Feather,
-    name: "Elegant Design",
-    description: "Timeless, minimal aesthetics for the modern home.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Quality({
   standalone = false,
-  small_header = "The Difference",
-  big_header = "Why Choose Auremet",
-  discription = "Four quiet commitments woven into every thread we make.",
-  quality_details = default_quality_details,
+  small_header,
+  big_header,
+  description,
+  quality_details,
 }) {
+  const { t } = useTranslation();
+  const header = small_header || t("quality.small_header");
+  const title = big_header || t("quality.big_header");
+  const descriptions = description || t("quality.description");
+  const default_quality_details = quality_details || [
+    {
+      icon: Leaf,
+      name: t("quality.cotton.name"),
+      description: t("quality.cotton.description"),
+    },
+    {
+      icon: Sparkles,
+      name: t("quality.comfort.name"),
+      description: t("quality.comfort.description"),
+    },
+    {
+      icon: Shield,
+      name: t("quality.lasting.name"),
+      description: t("quality.lasting.description"),
+    },
+    {
+      icon: Feather,
+      name: t("quality.design.name"),
+      description: t("quality.design.description"),
+    },
+  ];
   return (
     <div
       className={
@@ -39,7 +44,7 @@ export default function Quality({
     >
       <div className="w-fit md:w-[600px] mx-auto text-center mb-15 ">
         <p className="text-sm  tracking-[3px] uppercase text-[#8d6a2b]">
-          {small_header}
+          {header}
         </p>
         <h2
           className={
@@ -48,9 +53,9 @@ export default function Quality({
               : "font-['Cormorant_Garamond'] font-bold my-5 text-4xl  text-[#8d6a2b] md:text-5xl "
           }
         >
-          {big_header}
+          {title}
         </h2>
-        <p className="text-lg text-gray-500">{discription}</p>
+        <p className="text-lg text-gray-500">{descriptions}</p>
       </div>
 
       {/* quality cards */}
@@ -61,7 +66,7 @@ export default function Quality({
             : "lg:w-[87%] lg:mx-auto flex flex-col gap-6 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-7 "
         }
       >
-        {quality_details.map((feature) => {
+        {default_quality_details.map((feature) => {
           const Icon = feature.icon;
           return (
             <div

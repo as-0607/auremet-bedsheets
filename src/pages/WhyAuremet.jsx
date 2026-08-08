@@ -1,56 +1,54 @@
 import Promise from "../components/Promise";
 import Quality from "../components/Quality";
 import { Leaf, Sparkles, Shield, Feather } from "lucide-react";
-
-const default_quality_details = [
-  {
-    icon: Leaf,
-    name: "Premium Cotton",
-    description:
-      "Long-staple Egyptian fibres selected for silky strength and unmatched breathability.",
-  },
-  {
-    icon: Sparkles,
-    name: "Luxury Comfort",
-    description:
-      "A hotel-weight hand and a temperature-regulating weave designed for real sleep.",
-  },
-  {
-    icon: Shield,
-    name: "Long Lasting",
-    description:
-      "Double-turned hems and reinforced stitching for years of gentle use.",
-  },
-  {
-    icon: Feather,
-    name: "Elegant Design",
-    description:
-      "Minimal palettes, considered proportions — pieces that never date.",
-  },
-];
-
-const promiseDetails =[
-  "OEKO-TEX certified fibres",
-  "Sandwashed for pre-softened comfort",
-  "Reinforced double stitching",
-  "60-night home trial, always",
-];
+import { useTranslation } from "react-i18next";
 
 export default function WhyAuremet() {
+  const { t } = useTranslation();
+
+  const default_quality_details = [
+    {
+      icon: Leaf,
+      name: t("why_quality.cotton.name"),
+      description: t("why_quality.cotton.description"),
+    },
+    {
+      icon: Sparkles,
+      name: t("why_quality.comfort.name"),
+      description: t("why_quality.comfort.description"),
+    },
+    {
+      icon: Shield,
+      name: t("why_quality.lasting.name"),
+      description: t("why_quality.lasting.description"),
+    },
+    {
+      icon: Feather,
+      name: t("why_quality.design.name"),
+      description: t("why_quality.design.description"),
+    },
+  ];
+
+  const promiseDetails = [
+    t("why_promise.promiseDetails.0"),
+    t("why_promise.promiseDetails.1"),
+    t("why_promise.promiseDetails.2"),
+    t("why_promise.promiseDetails.3"),
+  ];
   return (
     <section>
       <Quality
         standalone={true}
-        small_header="Our Craft"
-        big_header="Why Auremet"
-        discription="The quiet standards behind every thread, every stitch, and every night of extraordinary rest."
+        small_header={t("why_quality.small_header")}
+        big_header={t("why_quality.big_header")}
+        description={t("why_quality.description")}
         quality_details={default_quality_details}
       />
-      <Promise 
-      standalone={true}
-      small_header="The Promise"
-      big_header="Made to be lived with."
-      promise_details={promiseDetails}
+      <Promise
+        standalone={true}
+        small_header={t("why_promise.heading")}
+        big_header={t("why_promise.title")}
+        promise_details={promiseDetails}
       />
     </section>
   );

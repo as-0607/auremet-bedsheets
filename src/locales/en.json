@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "home": "HOME",
+    "collections": "COLLECTIONS",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "why_auremet": "WHY AUREMET",
+    "login": "LOGIN",
+    "buy_now": "SHOP NOW"
+  },
+  "hero": {
+    "heading": "The Auremet Collection",
+    "title1": "Choose comfort",
+    "title2": "that lasts.",
+    "description": "Luxury bedding crafted for beautiful homes — spun from premium Egyptian cotton and finished by hand for a lifetime of quiet, timeless comfort.",
+    "button1": "Shop Collection",
+    "arrow": "→",
+    "button2": "Explore Quality",
+    "perk1": "FREE SHIPPING",
+    "perk2": "60-NIGHT TRIAL",
+    "perk3": "LIFETIME CARE",
+    "rating": "Rated 4.9 by 12,400 sleepers"
+  },
+  "quality": {
+    "small_header": "The Difference",
+    "big_header": "Why Choose Auremet",
+    "description": "Four quiet commitments woven into every thread we make.",
+    "cotton": {
+      "name": "Premium Cotton",
+      "description": "Soft, breathable Egyptian fabrics woven for lasting comfort."
+    },
+    "comfort": {
+      "name": "Luxury Comfort",
+      "description": "A hotel-quality sleeping experience, night after night."
+    },
+    "lasting": {
+      "name": "Long Lasting",
+      "description": "Engineered to soften with every wash for years to come."
+    },
+    "design": {
+      "name": "Elegant Design",
+      "description": "Timeless, minimal aesthetics for the modern home."
+    }
+  },
+  "why_quality": {
+    "small_header": "Our Craft",
+    "big_header": "Why Auremet",
+    "description": "The quiet standards behind every thread, every stitch, and every night of extraordinary rest.",
+    "cotton": {
+      "name": "Premium Cotton",
+      "description": "Long-staple Egyptian fibres selected for silky strength and unmatched breathability."
+    },
+    "comfort": {
+      "name": "Luxury Comfort",
+      "description": "A hotel-weight hand and a temperature-regulating weave designed for real sleep."
+    },
+    "lasting": {
+      "name": "Long Lasting",
+      "description": "Double-turned hems and reinforced stitching for years of gentle use."
+    },
+    "design": {
+      "name": "Elegant Design",
+      "description": "Minimal palettes, considered proportions — pieces that never date."
+    }
+  },
+  "feature": {
+    "heading": "Featured",
+    "title": "Featured Collections",
+    "button1": "View All",
+    "collectionDetails": [
+      {
+        "name": "Luxury Bed Sheets",
+        "details": "600TC sateen Egyptian cotton.",
+        "price": 189
+      },
+      {
+        "name": "Comforter Sets",
+        "details": "Hotel-weight, cloud-soft fill.",
+        "price": 249
+      },
+      {
+        "name": "Duvet Covers",
+        "details": "Sandwashed cotton, softer over time.",
+        "price": 169
+      },
+      {
+        "name": "Pillow Covers",
+        "details": "Silky sateen finish, set of two.",
+        "price": 59
+      }
+    ],
+    "button2": "SHOP",
+    "arrow": "→"
+  },
+  "promise": {
+    "heading": "Our Promise",
+    "title": "Comfort meets craftsmanship.",
+    "description": "Every piece begins with the world's finest long-staple Egyptian cotton, woven by artisans who understand that true luxury lives in the smallest details — a softer finish, a stronger stitch, a fabric that only grows more beautiful with time.",
+    "year": "15",
+    "year_span1": "YEARS OF",
+    "year_span2": "CRAFT",
+    "promiseDetails": [
+      "Premium Egyptian cotton",
+      "Softer after every wash",
+      "Durable double stitching",
+      "Timeless, minimal aesthetics"
+    ],
+    "button": "Learn More",
+    "right_check": "✓"
+  },
+  "why_promise": {
+    "heading": "The Promise",
+    "title": "Made to be lived with.",
+    "promiseDetails": [
+      "OEKO-TEX certified fibres",
+      "Sandwashed for pre-softened comfort",
+      "Reinforced double stitching",
+      "60-night home trial, always"
+    ],
+    "button": "Shop the Collection"
+  },
+  "loved": {
+    "heading": "Loved Worldwide",
+    "title": "Softness, spoken for.",
+    "testimonials": [
+      {
+        "text": "The softness is unreal. It genuinely feels like a five-star hotel every night.",
+        "name": "Isabelle M.",
+        "location": "NEW YORK",
+        "initial": "I"
+      },
+      {
+        "text": "Beautifully made, exquisitely packaged. Auremet has quietly become our favorite.",
+        "name": "Adrian K.",
+        "location": "LONDON",
+        "initial": "A"
+      },
+      {
+        "text": "Elegant, restrained, and impossibly comfortable. Worth every thread.",
+        "name": "Sana R.",
+        "location": "DUBAI",
+        "initial": "S"
+      }
+    ]
+  },
+  "journal": {
+    "heading": "JOURNAL",
+    "title": "Bring luxury home.",
+    "description1": "Subscribe for early access to new collections, quiet stories from",
+    "description2": "our atelier, and a warm 10% welcome.",
+    "button": "SUBSCRIBE",
+    "placeholder": "Your email address"
+  },
+  "collections": {
+    "heading": "The Auremet Collection",
+    "title": "Collections",
+    "description": "Bedding, comforters and covers — each piece designed to feel timeless, and made to be lived with for years.",
+    "button": "SHOP",
+    "collectionDetails": [
+      {
+        "name": "Luxury Bed Sheets",
+        "details": "600TC sateen Egyptian cotton set.",
+        "price": "189"
+      },
+      {
+        "name": "Signature Comforter",
+        "details": "All-season down-alternative fill.",
+        "price": "249"
+      },
+      {
+        "name": "Sandwashed Duvet Cover",
+        "details": "Softer with every wash.",
+        "price": "169"
+      },
+      {
+        "name": "Sateen Pillow Covers",
+        "details": "Set of two, hidden closure.",
+        "price": "59"
+      },
+      {
+        "name": "Percale Sheet Set",
+        "details": "Crisp, breathable weave.",
+        "price": "179"
+      },
+      {
+        "name": "Cloud Weight Duvet",
+        "details": "Hotel-weight warmth.",
+        "price": "289"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Our Story",
+    "title": "Bedding as heirloom.",
+    "description": "Auremet Linen was founded on a single idea — that the objects we sleep between should feel as considered as the rooms we build.",
+    "p1": "We work with a small circle of family-run mills in the Nile Delta, where long-staple Egyptian cotton has been woven for generations.",
+    "p2": "Every collection is designed in-house, tested in real bedrooms, and refined until nothing else can be removed.",
+    "p3": "The result is a quiet kind of luxury — pieces that arrive beautifully, wear beautifully, and stay with you."
+  },
+  "contact": {
+    "heading": "Concierge",
+    "title": "Get in touch.",
+    "description": "We reply within one business day.",
+    "button": "SEND MESSAGE",
+    "placeholder_firstname": "First name",
+    "placeholder_lastname": "Last name",
+    "placeholder_email": "Email",
+    "placeholder_message": "How can we help?",
+    "email": "EMAIL",
+    "phone": "PHONE",
+    "atelier": "ATELIER",
+    "email_details": "hello@auremet.com",
+    "phone_details": "+1 (212) 555 0180",
+    "atelier_details": "24 Madison Ave, New York, NY"
+  },
+  "login": {
+    "heading": "AUREMET",
+    "title": "Welcome back",
+    "description": "Sign in to your account",
+    "email": "EMAIL",
+    "email_placeholder": "you@example.com",
+    "password": "PASSWORD",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?",
+    "sign_in": "SIGN IN",
+    "or": "OR",
+    "continue_google": "CONTINUE WITH GOOGLE",
+    "new_to_auremet": "New to Auremet?",
+    "create_account": "Create an account"
+  },
+  "footer": {
+    "brand": "AUREMET",
+    "description": "Luxury bedding crafted from premium Egyptian cotton for homes that appreciate timeless comfort.",
+    "quick_links": "QUICK LINKS",
+    "home": "Home",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact",
+    "customer_care": "CUSTOMER CARE",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "faq": "FAQ",
+    "care_guide": "Care Guide",
+    "contact_title": "CONTACT",
+    "email": "hello@auremet.com",
+    "phone": "+1 (212) 555 0180",
+    "address": "24 Madison Ave, New York, NY",
+    "copyright": "© 2026 AUREMET LINEN. ALL RIGHTS RESERVED.",
+    "crafted": "CRAFTED WITH QUIET LUXURY."
+  }
+}

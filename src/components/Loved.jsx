@@ -1,32 +1,35 @@
+import {useTranslation} from "react-i18next";
+
 export default function Loved() {
+  const { t } = useTranslation();
   const testimonials = [
     {
-      text: "The softness is unreal. It genuinely feels like a five-star hotel every night.",
-      name: "Isabelle M.",
-      location: "NEW YORK",
-      initial: "I",
+      text: t("loved.testimonials.0.text"),
+      name: t("loved.testimonials.0.name"),
+      location: t("loved.testimonials.0.location"),
+      initial: t("loved.testimonials.0.initial"),
     },
     {
-      text: "Beautifully made, exquisitely packaged. Auremet has quietly become our favorite.",
-      name: "Adrian K.",
-      location: "LONDON",
-      initial: "A",
+      text: t("loved.testimonials.1.text"),
+      name: t("loved.testimonials.1.name"),
+      location: t("loved.testimonials.1.location"),
+      initial: t("loved.testimonials.1.initial"),
     },
     {
-      text: "Elegant, restrained, and impossibly comfortable. Worth every thread.",
-      name: "Sana R.",
-      location: "DUBAI",
-      initial: "S",
+      text: t("loved.testimonials.2.text"),
+      name: t("loved.testimonials.2.name"),
+      location: t("loved.testimonials.2.location"),
+      initial: t("loved.testimonials.2.initial"),
     },
   ];
   return (
     <div className="bg-[#f4eadc] py-30 px-5 sm:px-8 md:px-10 lg:px-16">
       <div className="w-fit md:w-[600px] mx-auto text-center mb-15 ">
         <p className="text-sm  tracking-[3px] uppercase text-[#8d6a2b]">
-          Loved Worldwide
+          {t("loved.heading")}
         </p>
         <h2 className="font-['Cormorant_Garamond'] font-bold my-5 text-4xl  text-[#8d6a2b] md:text-5xl ">
-          Softness, spoken for.
+          {t("loved.title")}
         </h2>
       </div>
       <div className="lg:min-w-[900px] lg:max-w-[1200px] mx-auto grid max-w-[1500px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
