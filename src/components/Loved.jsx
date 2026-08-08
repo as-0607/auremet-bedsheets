@@ -1,4 +1,4 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Loved() {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ export default function Loved() {
     },
   ];
   return (
-    <div className="bg-[#f4eadc] py-30 px-5 sm:px-8 md:px-10 lg:px-16">
+    <div className="bg-[#f7f3ed] py-30 px-5 sm:px-8 md:px-10 lg:px-16">
       <div className="w-fit md:w-[600px] mx-auto text-center mb-15 ">
         <p className="text-sm  tracking-[3px] uppercase text-[#8d6a2b]">
           {t("loved.heading")}

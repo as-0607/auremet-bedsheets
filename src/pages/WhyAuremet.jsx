@@ -1,4 +1,3 @@
-import Promise from "../components/Promise";
 import Quality from "../components/Quality";
 import { Leaf, Sparkles, Shield, Feather } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -43,12 +42,6 @@ export default function WhyAuremet() {
         big_header={t("why_quality.big_header")}
         description={t("why_quality.description")}
         quality_details={default_quality_details}
-      />
-      <Promise
-        standalone={true}
-        small_header={t("why_promise.heading")}
-        big_header={t("why_promise.title")}
-        promise_details={promiseDetails}
       />
     </section>
   );
