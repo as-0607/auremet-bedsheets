@@ -1,6 +1,5 @@
 {
-  "name": "bedsheets-website",
-  "homepage": "https://as-0607.github.io/bedsheets-website/",
+  "name": "auremet-bedsheets",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
+
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -18,6 +16,7 @@
     "lucide-react": "^1.28.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-i18next": "^17.0.11",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.1",
     "tailwindcss": "^4.3.3"

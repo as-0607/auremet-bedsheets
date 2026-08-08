@@ -8,7 +8,7 @@ import "./i18n";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/bedsheets-website">
+    <BrowserRouter>
       <ScrollToTop />
       <App />
     </BrowserRouter>
