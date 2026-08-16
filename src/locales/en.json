@@ -249,5 +249,24 @@
     "address": "24 Madison Ave, New York, NY",
     "copyright": "© 2026 AUREMET LINEN. ALL RIGHTS RESERVED.",
     "crafted": "CRAFTED WITH QUIET LUXURY."
+  },
+  "duvets": {
+  "eyebrow": "THE AUREMET COLLECTION",
+  "title": "Duvets",
+  "description": "Premium duvets with a microfiber fill, available in a choice of cover materials.",
+  "filter_note": "Filtering by cover material — all duvets are filled with microfiber.",
+  "materials": {
+    "all": "ALL",
+    "satin": "SATIN",
+    "stripe": "STRIPE",
+    "cotton": "COTTON"
+  },
+  "cover_label": "COVER",
+  "fill_label": "FILL",
+  "shop": "SHOP",
+  "sorry": {
+    "heading": "We're sorry.",
+    "message": "We don't currently have any duvets with a {{material}} cover. New materials are added regularly — please check back soon."
   }
+}
 }
