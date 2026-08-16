@@ -2,9 +2,11 @@
   "nav": {
     "home": "الرئيسية",
     "collections": "المجموعات",
-    "about": "من نحن",
+    "duvets": "ألحفة",
+    "quilts": "بطانيات",
+    "flat_sheets": "ملايات",
+    "fitted_sheets": "ملايات بأطراف مطاطية",
     "contact": "تواصل معنا",
-    "why_auremet": "لماذا AUREMET",
     "login": "تسجيل الدخول",
     "buy_now": "تسوق الآن"
   },

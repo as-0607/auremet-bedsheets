@@ -2,9 +2,11 @@
   "nav": {
     "home": "HOME",
     "collections": "COLLECTIONS",
-    "about": "ABOUT",
+    "duvets": "DUVETS",
+    "quilts": "QUILTS",
+    "flat_sheets": "FLAT SHEETS",
+    "fitted_sheets": "FITTED SHEETS",
     "contact": "CONTACT",
-    "why_auremet": "WHY AUREMET",
     "login": "LOGIN",
     "buy_now": "SHOP NOW"
   },

@@ -22,15 +22,14 @@ export default function Navbar() {
   }, []);
   const [open, setOpen] = useState(false);
   const a_style =
-    "text-sm tracking-[2px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]";
+    "whitespace-nowrap text-[13px] tracking-[1.5px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]";
   const linkobj = [
-    {
-      destination: "/",
-      title: t("nav.home"),
-    },
+    { destination: "/", title: t("nav.home") },
     { destination: "/collections", title: t("nav.collections") },
-    { destination: "/why_auremet", title: t("nav.why_auremet") },
-    { destination: "/about", title: t("nav.about") },
+    { destination: "/duvets", title: t("nav.duvets") },
+    { destination: "/quilts", title: t("nav.quilts") },
+    { destination: "/flat-sheets", title: t("nav.flat_sheets") },
+    { destination: "/fitted-sheets", title: t("nav.fitted_sheets") },
     { destination: "/contact", title: t("nav.contact") },
   ];
   return (
@@ -41,21 +40,26 @@ export default function Navbar() {
           : "bg-[#f4eadc] border-transparent "
       }`}
     >
-      <div className="mx-auto max-w-7xl px-8 sm:px-10 lg:px-12">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex  gap-3 items-end">
-            <h1 className="font-['Cormorant_Garamond'] font-bold text-[26px] tracking-[8px] text-[#8d6a2b] leading-none">
+      <div className="mx-auto max-w-[1600px] px-6 xl:px-10">
+        <div className="flex h-20 items-center justify-between gap-6">
+          {/* Logo — pinned to the far left, never shrinks */}
+          <Link
+            to="/"
+            className="flex shrink-0 items-end gap-2"
+          >
+            <h1 className="font-['Cormorant_Garamond'] font-bold text-[24px] tracking-[6px] text-[#8d6a2b] leading-none whitespace-nowrap">
               AUREMET
             </h1>
-            <p className="mt-1 text-[12px] tracking-[3px] text-[#b18a42] hidden sm:inline">
+            <p className="mb-[1px] text-[11px] tracking-[3px] text-[#b18a42] hidden sm:inline whitespace-nowrap">
               LINEN
             </p>
-          </div>
+          </Link>
+
           {/* Desktop navigation */}
-          <nav className="hidden lg:flex items-center gap-9">
-            <ul className="flex gap-[35px]">
+          <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
+            <ul className="flex items-center gap-6 xl:gap-8">
               {linkobj.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="shrink-0">
                   <Link to={item.destination} className={a_style}>
                     {item.title}
                   </Link>
@@ -63,26 +67,27 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
+
           {/* Desktop actions */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
             <LanguageSwitcher />
             <Link
               to="/login"
-              className="text-sm tracking-[2px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]"
+              className="whitespace-nowrap text-[13px] tracking-[1.5px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]"
             >
               {t("nav.login")}
             </Link>
 
             <Link
               to="/collections"
-              className="cursor-pointer rounded-full border-0 bg-[#b18a42] px-[25px] py-[15px] text-[14px] tracking-[2px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
+              className="cursor-pointer whitespace-nowrap rounded-full border-0 bg-[#b18a42] px-6 py-3 text-[13px] tracking-[1.5px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
             >
               {t("nav.buy_now")}
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex gap-3 lg:hidden ">
+          <div className="flex gap-3 lg:hidden shrink-0">
             <LanguageSwitcher />
             <button
               onClick={() => setOpen(!open)}
@@ -94,6 +99,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden 
     ${open ? "max-h-[500px] " : "max-h-0"}`}
@@ -101,7 +107,6 @@ export default function Navbar() {
           {/* Mobile menu */}
           {open && (
             <div className="lg:hidden border-t border-[#e7dfd1] py-5 ">
-              {/* Navigation Links */}
               <nav>
                 <ul className="flex flex-col gap-4">
                   {linkobj.map((item, index) => (
@@ -118,7 +123,6 @@ export default function Navbar() {
                 </ul>
               </nav>
 
-              {/* Actions */}
               <div className="mt-6 flex flex-col gap-4">
                 <Link
                   to="/login"
