@@ -251,22 +251,80 @@
     "crafted": "CRAFTED WITH QUIET LUXURY."
   },
   "duvets": {
-  "eyebrow": "THE AUREMET COLLECTION",
-  "title": "Duvets",
-  "description": "Premium duvets with a microfiber fill, available in a choice of cover materials.",
-  "filter_note": "Filtering by cover material — all duvets are filled with microfiber.",
-  "materials": {
-    "all": "ALL",
-    "satin": "SATIN",
-    "stripe": "STRIPE",
-    "cotton": "COTTON"
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Duvets",
+    "description": "Premium duvets with a microfiber fill, available in a choice of cover materials.",
+    "filter_note": "Filtering by cover material — all duvets are filled with microfiber.",
+    "materials": {
+      "all": "ALL",
+      "satin": "SATIN",
+      "stripe": "STRIPE",
+      "cotton": "COTTON"
+    },
+    "cover_label": "COVER",
+    "fill_label": "FILL",
+    "shop": "SHOP",
+    "sorry": {
+      "heading": "We're sorry.",
+      "message": "We don't currently have any duvets with a {{material}} cover. New materials are added regularly — please check back soon."
+    }
   },
-  "cover_label": "COVER",
-  "fill_label": "FILL",
-  "shop": "SHOP",
-  "sorry": {
-    "heading": "We're sorry.",
-    "message": "We don't currently have any duvets with a {{material}} cover. New materials are added regularly — please check back soon."
+  "fittedSheets": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Fitted Sheets",
+    "description": "Deep-pocket fitted sheets that stay smooth and secure, night after night.",
+    "filter_note": "Filtering by cover material — all fitted sheets are made for a secure, comfortable fit.",
+    "materials": {
+      "all": "ALL",
+      "satin": "SATIN",
+      "stripe": "STRIPE",
+      "cotton": "COTTON"
+    },
+    "cover_label": "COVER",
+    "fill_label": "FILL",
+    "shop": "SHOP",
+    "sorry": {
+      "heading": "We're sorry.",
+      "message": "We don't currently have any fitted sheets with a {{material}} cover. New materials are added regularly — please check back soon."
+    }
+  },
+
+  "flatSheets": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Flat Sheets",
+    "description": "Soft, breathable flat sheets finished by hand for a smooth, hotel-quality feel.",
+    "filter_note": "Filtering by cover material — all flat sheets are designed for a smooth and comfortable feel.",
+    "materials": {
+      "all": "ALL",
+      "satin": "SATIN",
+      "stripe": "STRIPE",
+      "cotton": "COTTON"
+    },
+    "cover_label": "COVER",
+    "fill_label": "FILL",
+    "shop": "SHOP",
+    "sorry": {
+      "heading": "We're sorry.",
+      "message": "We don't currently have any flat sheets with a {{material}} cover. New materials are added regularly — please check back soon."
+    }
+  },
+  "quilts": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Quilts",
+    "description": "Lightweight, breathable quilts stitched for texture and warmth — perfect for layering in any season.",
+    "filter_note": "Filtering by cover material — all quilts are filled with microfiber.",
+    "materials": {
+      "all": "ALL",
+      "satin": "SATIN",
+      "stripe": "STRIPE",
+      "cotton": "COTTON"
+    },
+    "cover_label": "COVER",
+    "fill_label": "FILL",
+    "shop": "SHOP",
+    "sorry": {
+      "heading": "We're sorry.",
+      "message": "We don't currently have any quilts with a {{material}} cover. New materials are added regularly — please check back soon."
+    }
   }
-}
 }
