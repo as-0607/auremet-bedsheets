@@ -4,7 +4,7 @@ import duvetCoverImage from "../assets/product_duvet.jpg";
 import pillowImage from "../assets/product_pillows.jpg";
 import sheetsImage from "../assets/product_sheets.jpg";
 
-export const SIZES = ["Twin", "Twin XL", "Full", "Queen", "King"];
+export const SIZES = ["Single", "Double", "Queen", "King", "Super King"];
 
 export const COLORS = [
   { name: "Ivory", hex: "#eee8d9" },
@@ -18,12 +18,36 @@ export const COLORS = [
 ];
 
 const sizePrices = (base) => ({
-  Twin: base,
-  "Twin XL": base + 10,
-  Full: base + 25,
+  Single: base,
+  Double: base + 20,
   Queen: base + 45,
   King: base + 75,
+  "Super King": base + 105,
 });
+
+const flatSheetPrices = {
+  Single: 340,
+  Double: 470,
+  Queen: 550,
+  King: 720,
+  "Super King": 820,
+};
+
+const fittedSheetPrices = {
+  Single: 450,
+  Double: 570,
+  Queen: 640,
+  King: 840,
+  "Super King": 940,
+};
+
+const stripeSheetPrices = {
+  Single: 650,
+  Double: 730,
+  Queen: 840,
+  King: 960,
+  "Super King": 1150,
+};
 
 export const CATEGORY_PATHS = {
   duvets: "/duvets",
@@ -170,46 +194,38 @@ export const PRODUCTS = [
   {
     slug: "classic-flat-sheet",
     category: "flat-sheets",
-    name: "Classic Flat Sheet",
-    description: "A soft, breathable top layer with a hand-finished edge.",
+    name: "Flat Sheet Set",
+    description: "A flat sheet set with two pillowcases for Single and four pillowcases for larger sizes.",
     material: "Egyptian cotton sateen",
     image: sheetsImage,
     colors: ["Ivory", "White", "Sand", "Blush", "Sage", "Sky", "Navy"],
     sizes: SIZES,
-    prices: sizePrices(99),
+    prices: flatSheetPrices,
+    currency: "EGP",
   },
   {
-    slug: "cool-percale-flat-sheet",
+    slug: "stripe-bed-sheet-set",
     category: "flat-sheets",
-    name: "Cool Percale Flat Sheet",
-    description: "A crisp, airy weave made for fresh and comfortable sleep.",
-    material: "Cotton percale",
+    name: "Stripe Bed Sheet Set",
+    description: "A striped bed sheet set with two pillowcases for Single and four pillowcases for larger sizes.",
+    material: "Striped cotton",
     image: sheetsImage,
     colors: ["White", "Ivory", "Sky", "Charcoal"],
     sizes: SIZES,
-    prices: sizePrices(109),
+    prices: stripeSheetPrices,
+    currency: "EGP",
   },
   {
     slug: "deep-pocket-fitted-sheet",
     category: "fitted-sheets",
-    name: "Deep-Pocket Fitted Sheet",
-    description: "A secure, smooth fit for mattresses up to 40 cm deep.",
+    name: "Fitted Sheet Set",
+    description: "A fitted sheet set with two pillowcases for Single and four pillowcases for larger sizes.",
     material: "Egyptian cotton sateen",
     image: sheetsImage,
     colors: ["Ivory", "White", "Sand", "Blush", "Sage", "Sky", "Navy"],
     sizes: SIZES,
-    prices: sizePrices(119),
-  },
-  {
-    slug: "percale-fitted-sheet",
-    category: "fitted-sheets",
-    name: "Percale Fitted Sheet",
-    description: "Breathable cotton with full elastic for a dependable fit.",
-    material: "Cotton percale",
-    image: sheetsImage,
-    colors: ["White", "Ivory", "Sky", "Sage", "Charcoal"],
-    sizes: SIZES,
-    prices: sizePrices(109),
+    prices: fittedSheetPrices,
+    currency: "EGP",
   },
 ];
 

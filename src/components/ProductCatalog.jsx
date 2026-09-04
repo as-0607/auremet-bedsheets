@@ -30,7 +30,7 @@ const copy = {
   },
 };
 
-function FilterContent({ selectedColors, setSelectedColors, selectedSizes, setSelectedSizes, maxPrice, setMaxPrice, clearFilters, labels }) {
+function FilterContent({ selectedColors, setSelectedColors, selectedSizes, setSelectedSizes, maxPrice, setMaxPrice, priceCeiling, currency, clearFilters, labels }) {
   const toggle = (value, selected, setter) => {
     setter(selected.includes(value) ? selected.filter((item) => item !== value) : [...selected, value]);
   };
@@ -70,10 +70,10 @@ function FilterContent({ selectedColors, setSelectedColors, selectedSizes, setSe
       <div className="border-t border-[#dfd2bd] pt-7">
         <div className="mb-4 flex items-center justify-between gap-3">
           <h3 className="text-sm font-semibold uppercase tracking-[1.5px] text-[#6f5425]">{labels.price}</h3>
-          <span className="text-sm font-medium text-[#8d6a2b]">${maxPrice}</span>
+          <span className="text-sm font-medium text-[#8d6a2b]">{currency} {maxPrice}</span>
         </div>
-        <input aria-label={labels.price} type="range" min="50" max="325" step="5" value={maxPrice} onChange={(event) => setMaxPrice(Number(event.target.value))} className="w-full accent-[#8d6a2b]" />
-        <div className="mt-2 flex justify-between text-xs text-gray-400"><span>$50</span><span>$325</span></div>
+        <input aria-label={labels.price} type="range" min="0" max={priceCeiling} step="10" value={maxPrice} onChange={(event) => setMaxPrice(Number(event.target.value))} className="w-full accent-[#8d6a2b]" />
+        <div className="mt-2 flex justify-between text-xs text-gray-400"><span>{currency} 0</span><span>{currency} {priceCeiling}</span></div>
       </div>
 
       <button onClick={clearFilters} className="flex items-center gap-2 text-sm font-medium text-[#8d6a2b] hover:text-[#6f5425]">
@@ -87,9 +87,11 @@ export default function ProductCatalog({ category, eyebrow, title, description, 
   const labels = copy[language === "ar" ? "ar" : "en"];
   const products = getProductsByCategory(category);
   const highestPrice = Math.max(...products.flatMap((product) => Object.values(product.prices)));
+  const priceCeiling = Math.ceil(highestPrice / 50) * 50;
+  const currency = products[0]?.currency || "$";
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
-  const [maxPrice, setMaxPrice] = useState(Math.max(325, highestPrice));
+  const [maxPrice, setMaxPrice] = useState(priceCeiling);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const filteredProducts = useMemo(() => products.filter((product) => {
@@ -102,10 +104,10 @@ export default function ProductCatalog({ category, eyebrow, title, description, 
   const clearFilters = () => {
     setSelectedColors([]);
     setSelectedSizes([]);
-    setMaxPrice(Math.max(325, highestPrice));
+    setMaxPrice(priceCeiling);
   };
 
-  const filterProps = { selectedColors, setSelectedColors, selectedSizes, setSelectedSizes, maxPrice, setMaxPrice, clearFilters, labels };
+  const filterProps = { selectedColors, setSelectedColors, selectedSizes, setSelectedSizes, maxPrice, setMaxPrice, priceCeiling, currency, clearFilters, labels };
 
   return (
     <main className="min-h-screen bg-[#f4eadc] px-5 pb-24 pt-32 sm:px-8 lg:px-12">
@@ -151,7 +153,7 @@ export default function ProductCatalog({ category, eyebrow, title, description, 
                           {product.colors.length > 6 && <span className="text-xs text-gray-500">+{product.colors.length - 6}</span>}
                         </div>
                         <div className="mt-5 flex items-center justify-between gap-4 border-t border-[#e3d8c6] pt-5">
-                          <span className="text-sm text-gray-700">{labels.from} <strong>${startingPrice}</strong></span>
+                          <span className="text-sm text-gray-700">{labels.from} <strong>{product.currency || "$"} {startingPrice}</strong></span>
                           <Link to={`/products/${product.slug}`} className="text-xs font-semibold tracking-[1.3px] text-[#8d6a2b] hover:text-[#6f5425]">{labels.view} →</Link>
                         </div>
                       </div>

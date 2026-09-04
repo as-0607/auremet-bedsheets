@@ -19,6 +19,8 @@ const copy = {
     careNote: "Take time to feel the difference at home.",
     notFound: "Product not found",
     return: "Return to products",
+    details: "Details",
+    returns: "Return Policy",
   },
   ar: {
     back: "العودة إلى المنتجات",
@@ -34,6 +36,8 @@ const copy = {
     careNote: "امنح نفسك الوقت لتشعر بالفرق في منزلك.",
     notFound: "المنتج غير موجود",
     return: "العودة إلى المنتجات",
+    details: "التفاصيل",
+    returns: "سياسة الاسترجاع",
   },
 };
 
@@ -76,7 +80,7 @@ export default function ProductDetail() {
             <p className="mb-3 text-xs uppercase tracking-[2px] text-[#b18a42]">{product.material}</p>
             <h1 className="font-['Cormorant_Garamond'] text-5xl font-semibold leading-tight text-[#7d5b24] sm:text-6xl">{product.name}</h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-500">{product.description}</p>
-            <p className="mt-7 font-['Cormorant_Garamond'] text-4xl font-semibold text-[#332b20]" aria-live="polite">${totalPrice}</p>
+            <p className="mt-7 font-['Cormorant_Garamond'] text-4xl font-semibold text-[#332b20]" aria-live="polite">{product.currency || "$"} {totalPrice}</p>
 
             <fieldset className="mt-9">
               <legend className="mb-4 flex w-full items-center justify-between text-sm font-semibold text-[#55452e]">
@@ -126,6 +130,21 @@ export default function ProductDetail() {
             <div className="mt-8 grid gap-4 border-t border-[#ddcfb7] pt-7 sm:grid-cols-2">
               <div className="flex gap-3"><Truck className="mt-0.5 h-5 w-5 shrink-0 text-[#9a7535]" /><div><h2 className="text-sm font-semibold text-[#55452e]">{labels.shipping}</h2><p className="mt-1 text-xs leading-relaxed text-gray-500">{labels.shippingNote}</p></div></div>
               <div className="flex gap-3"><ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#9a7535]" /><div><h2 className="text-sm font-semibold text-[#55452e]">{labels.care}</h2><p className="mt-1 text-xs leading-relaxed text-gray-500">{labels.careNote}</p></div></div>
+            </div>
+
+            <div className="mt-8 divide-y divide-[#ddcfb7] border-y border-[#ddcfb7]">
+              <details className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold uppercase tracking-[1.3px] text-[#55452e]">
+                  {labels.details}<Plus className="h-4 w-4 transition-transform group-open:rotate-45" />
+                </summary>
+                <div className="min-h-12" />
+              </details>
+              <details className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold uppercase tracking-[1.3px] text-[#55452e]">
+                  {labels.returns}<Plus className="h-4 w-4 transition-transform group-open:rotate-45" />
+                </summary>
+                <div className="min-h-12" />
+              </details>
             </div>
           </section>
         </div>
