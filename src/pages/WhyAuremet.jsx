@@ -28,12 +28,6 @@ export default function WhyAuremet() {
     },
   ];
 
-  const promiseDetails = [
-    t("why_promise.promiseDetails.0"),
-    t("why_promise.promiseDetails.1"),
-    t("why_promise.promiseDetails.2"),
-    t("why_promise.promiseDetails.3"),
-  ];
   return (
     <section>
       <Quality

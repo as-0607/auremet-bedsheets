@@ -1,0 +1,222 @@
+import duvetImage from "../assets/product_comforter.jpg";
+import quiltImage from "../assets/hero-bed.jpg";
+import duvetCoverImage from "../assets/product_duvet.jpg";
+import pillowImage from "../assets/product_pillows.jpg";
+import sheetsImage from "../assets/product_sheets.jpg";
+
+export const SIZES = ["Twin", "Twin XL", "Full", "Queen", "King"];
+
+export const COLORS = [
+  { name: "Ivory", hex: "#eee8d9" },
+  { name: "White", hex: "#ffffff" },
+  { name: "Sand", hex: "#cfb890" },
+  { name: "Blush", hex: "#d8aca5" },
+  { name: "Sage", hex: "#9eaa91" },
+  { name: "Sky", hex: "#9eb6c5" },
+  { name: "Navy", hex: "#26394c" },
+  { name: "Charcoal", hex: "#555655" },
+];
+
+const sizePrices = (base) => ({
+  Twin: base,
+  "Twin XL": base + 10,
+  Full: base + 25,
+  Queen: base + 45,
+  King: base + 75,
+});
+
+export const CATEGORY_PATHS = {
+  duvets: "/duvets",
+  quilts: "/quilts",
+  "duvet-covers": "/duvet-covers",
+  pillowcases: "/pillowcases",
+  "flat-sheets": "/flat-sheets",
+  "fitted-sheets": "/fitted-sheets",
+};
+
+export const PRODUCTS = [
+  {
+    slug: "classic-satin-duvet",
+    category: "duvets",
+    name: "Classic Satin Duvet",
+    description: "A smooth satin shell with cloud-soft microfiber warmth.",
+    material: "Satin · Microfiber fill",
+    image: duvetImage,
+    colors: ["Ivory", "White", "Sand", "Blush", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(189),
+  },
+  {
+    slug: "cloud-weight-duvet",
+    category: "duvets",
+    name: "Cloud Weight Duvet",
+    description: "Hotel-weight comfort balanced for restful sleep all year.",
+    material: "Cotton · Microfiber fill",
+    image: duvetImage,
+    colors: ["White", "Ivory", "Sage", "Sky"],
+    sizes: SIZES,
+    prices: sizePrices(209),
+  },
+  {
+    slug: "cool-touch-duvet",
+    category: "duvets",
+    name: "Cool Touch Duvet",
+    description: "A breathable lightweight layer made for warmer nights.",
+    material: "Percale · Microfiber fill",
+    image: duvetImage,
+    colors: ["White", "Sand", "Sky", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(169),
+  },
+  {
+    slug: "hand-stitched-quilt",
+    category: "quilts",
+    name: "Hand-Stitched Quilt",
+    description: "Quiet geometric stitching with an airy, tactile finish.",
+    material: "Washed cotton",
+    image: quiltImage,
+    colors: ["Ivory", "Sand", "Sage", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(179),
+  },
+  {
+    slug: "sateen-channel-quilt",
+    category: "quilts",
+    name: "Sateen Channel Quilt",
+    description: "Soft channel quilting with a subtle, luminous sheen.",
+    material: "Cotton sateen",
+    image: quiltImage,
+    colors: ["White", "Blush", "Sky", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(189),
+  },
+  {
+    slug: "everyday-cotton-quilt",
+    category: "quilts",
+    name: "Everyday Cotton Quilt",
+    description: "A versatile mid-weight layer for effortless everyday use.",
+    material: "Pure cotton",
+    image: quiltImage,
+    colors: ["Ivory", "White", "Sand", "Sage", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(159),
+  },
+  {
+    slug: "sandwashed-duvet-cover",
+    category: "duvet-covers",
+    name: "Sandwashed Duvet Cover",
+    description: "Relaxed softness with an elegant hidden-button closure.",
+    material: "Sandwashed cotton",
+    image: duvetCoverImage,
+    colors: ["Ivory", "White", "Sand", "Sage", "Sky", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(149),
+  },
+  {
+    slug: "signature-sateen-duvet-cover",
+    category: "duvet-covers",
+    name: "Signature Sateen Duvet Cover",
+    description: "Silky Egyptian cotton with a refined hotel-inspired finish.",
+    material: "Egyptian cotton sateen",
+    image: duvetCoverImage,
+    colors: ["White", "Ivory", "Blush", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(169),
+  },
+  {
+    slug: "crisp-percale-duvet-cover",
+    category: "duvet-covers",
+    name: "Crisp Percale Duvet Cover",
+    description: "Cool, breathable comfort with a clean matte finish.",
+    material: "Cotton percale",
+    image: duvetCoverImage,
+    colors: ["White", "Sand", "Sky", "Sage"],
+    sizes: SIZES,
+    prices: sizePrices(159),
+  },
+  {
+    slug: "sateen-pillowcase-pair",
+    category: "pillowcases",
+    name: "Sateen Pillowcase Pair",
+    description: "Silky-soft pillowcases finished with a neat envelope closure.",
+    material: "Egyptian cotton sateen",
+    image: pillowImage,
+    colors: ["Ivory", "White", "Sand", "Blush", "Sage", "Sky", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(49),
+  },
+  {
+    slug: "percale-pillowcase-pair",
+    category: "pillowcases",
+    name: "Percale Pillowcase Pair",
+    description: "Crisp, breathable pillowcases designed for warm sleepers.",
+    material: "Cotton percale",
+    image: pillowImage,
+    colors: ["White", "Ivory", "Sky", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(45),
+  },
+  {
+    slug: "oxford-pillowcase-pair",
+    category: "pillowcases",
+    name: "Oxford Pillowcase Pair",
+    description: "A tailored flange edge for an elegant finishing layer.",
+    material: "Bordered cotton",
+    image: pillowImage,
+    colors: ["White", "Sand", "Blush", "Sage", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(55),
+  },
+  {
+    slug: "classic-flat-sheet",
+    category: "flat-sheets",
+    name: "Classic Flat Sheet",
+    description: "A soft, breathable top layer with a hand-finished edge.",
+    material: "Egyptian cotton sateen",
+    image: sheetsImage,
+    colors: ["Ivory", "White", "Sand", "Blush", "Sage", "Sky", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(99),
+  },
+  {
+    slug: "cool-percale-flat-sheet",
+    category: "flat-sheets",
+    name: "Cool Percale Flat Sheet",
+    description: "A crisp, airy weave made for fresh and comfortable sleep.",
+    material: "Cotton percale",
+    image: sheetsImage,
+    colors: ["White", "Ivory", "Sky", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(109),
+  },
+  {
+    slug: "deep-pocket-fitted-sheet",
+    category: "fitted-sheets",
+    name: "Deep-Pocket Fitted Sheet",
+    description: "A secure, smooth fit for mattresses up to 40 cm deep.",
+    material: "Egyptian cotton sateen",
+    image: sheetsImage,
+    colors: ["Ivory", "White", "Sand", "Blush", "Sage", "Sky", "Navy"],
+    sizes: SIZES,
+    prices: sizePrices(119),
+  },
+  {
+    slug: "percale-fitted-sheet",
+    category: "fitted-sheets",
+    name: "Percale Fitted Sheet",
+    description: "Breathable cotton with full elastic for a dependable fit.",
+    material: "Cotton percale",
+    image: sheetsImage,
+    colors: ["White", "Ivory", "Sky", "Sage", "Charcoal"],
+    sizes: SIZES,
+    prices: sizePrices(109),
+  },
+];
+
+export function getProductsByCategory(category) {
+  return PRODUCTS.filter((product) => product.category === category);
+}
+
+export function getProductBySlug(slug) {
+  return PRODUCTS.find((product) => product.slug === slug);
+}

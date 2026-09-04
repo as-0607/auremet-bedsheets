@@ -13,6 +13,7 @@ import Products from "../pages/Products";
 import DuvetCovers from "../pages/DuvetCovers";
 import Pillowcases from "../pages/Pillowcases";
 import Sheets from "../pages/Sheets";
+import ProductDetail from "../pages/ProductDetail";
 
 export default function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ export default function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:slug" element={<ProductDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/duvets" element={<Duvets />} />
         <Route path="/duvet-covers" element={<DuvetCovers />} />
