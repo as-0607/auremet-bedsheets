@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "HOME",
+    "products": "PRODUCTS",
     "collections": "COLLECTIONS",
     "duvets": "DUVETS",
     "quilts": "QUILTS",
@@ -249,6 +250,93 @@
     "address": "24 Madison Ave, New York, NY",
     "copyright": "© 2026 AUREMET LINEN. ALL RIGHTS RESERVED.",
     "crafted": "CRAFTED WITH QUIET LUXURY."
+  },
+  "products": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Products",
+    "description": "Explore bedding designed for lasting comfort, from cloud-soft layers to beautifully finished essentials.",
+    "explore": "EXPLORE",
+    "categories": {
+      "duvets": {
+        "name": "Duvets",
+        "description": "Soft, breathable warmth for every season."
+      },
+      "quilts": {
+        "name": "Quilts",
+        "description": "Lightweight layers with considered texture."
+      },
+      "duvetCovers": {
+        "name": "Duvet Covers",
+        "description": "An effortless way to refresh your bedroom."
+      },
+      "pillowcases": {
+        "name": "Pillowcases",
+        "description": "Smooth, gentle finishes for restful nights."
+      },
+      "sheets": {
+        "name": "Flat & Fitted Sheets",
+        "description": "Beautiful foundations tailored to your bed."
+      }
+    }
+  },
+  "duvetCovers": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Duvet Covers",
+    "description": "Thoughtfully finished duvet covers in breathable fabrics that become softer with every wash.",
+    "items": [
+      {
+        "name": "Sandwashed Duvet Cover",
+        "material": "SANDWASHED COTTON",
+        "description": "Relaxed softness with a discreet button closure."
+      },
+      {
+        "name": "Sateen Duvet Cover",
+        "material": "EGYPTIAN COTTON SATEEN",
+        "description": "A smooth, luminous finish with a hotel-inspired feel."
+      },
+      {
+        "name": "Percale Duvet Cover",
+        "material": "CRISP COTTON PERCALE",
+        "description": "Cool, breathable comfort with a clean matte finish."
+      }
+    ]
+  },
+  "pillowcases": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Pillowcases",
+    "description": "Premium pillowcases made for a cool, smooth touch and a beautifully composed bed.",
+    "items": [
+      {
+        "name": "Sateen Pillowcase Pair",
+        "material": "EGYPTIAN COTTON SATEEN",
+        "description": "Silky-soft pillowcases with a neat envelope closure."
+      },
+      {
+        "name": "Percale Pillowcase Pair",
+        "material": "COOL COTTON PERCALE",
+        "description": "Crisp, breathable pillowcases for warm sleepers."
+      },
+      {
+        "name": "Oxford Pillowcase Pair",
+        "material": "BORDERED COTTON",
+        "description": "A tailored flange edge for an elegant final layer."
+      }
+    ]
+  },
+  "sheets": {
+    "eyebrow": "THE AUREMET COLLECTION",
+    "title": "Flat & Fitted Sheets",
+    "description": "Choose the foundation that suits your bed and the way you like to sleep.",
+    "types": {
+      "flat": {
+        "name": "Flat Sheets",
+        "description": "Soft, breathable top sheets with a refined hand-finished edge."
+      },
+      "fitted": {
+        "name": "Fitted Sheets",
+        "description": "Deep-pocket sheets designed for a smooth, secure fit."
+      }
+    }
   },
   "duvets": {
     "eyebrow": "THE AUREMET COLLECTION",

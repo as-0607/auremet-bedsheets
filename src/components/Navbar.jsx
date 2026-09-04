@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
@@ -25,11 +25,8 @@ export default function Navbar() {
     "whitespace-nowrap text-[13px] tracking-[1.5px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]";
   const linkobj = [
     { destination: "/", title: t("nav.home") },
+    { destination: "/products", title: t("nav.products") },
     { destination: "/collections", title: t("nav.collections") },
-    { destination: "/duvets", title: t("nav.duvets") },
-    { destination: "/quilts", title: t("nav.quilts") },
-    { destination: "/flat-sheets", title: t("nav.flat_sheets") },
-    { destination: "/fitted-sheets", title: t("nav.fitted_sheets") },
     { destination: "/contact", title: t("nav.contact") },
   ];
   return (
@@ -60,9 +57,14 @@ export default function Navbar() {
             <ul className="flex items-center gap-6 xl:gap-8">
               {linkobj.map((item, index) => (
                 <li key={index} className="shrink-0">
-                  <Link to={item.destination} className={a_style}>
+                  <NavLink
+                    to={item.destination}
+                    className={({ isActive }) =>
+                      `${a_style} ${isActive ? "text-[#8d6a2b]" : ""}`
+                    }
+                  >
                     {item.title}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -111,13 +113,15 @@ export default function Navbar() {
                 <ul className="flex flex-col gap-4">
                   {linkobj.map((item, index) => (
                     <li key={index}>
-                      <Link
+                      <NavLink
                         to={item.destination}
                         onClick={() => setOpen(false)}
-                        className={`${a_style} block py-2`}
+                        className={({ isActive }) =>
+                          `${a_style} block py-2 ${isActive ? "text-[#8d6a2b]" : ""}`
+                        }
                       >
                         {item.title}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
