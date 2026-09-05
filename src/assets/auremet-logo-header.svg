@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" fill="none">
+  <title>Auremet Linen</title>
+  <!-- Flat serif A: the single flowing crossbar recalls the original linen motif. -->
+  <g fill="#9A783E">
+    <path d="M5 55v-2h4L28 7h3l20 46h5v2H35v-2h6L26 18 13 53h6v2H5Z"/>
+    <path d="M16 37c9-9 18-4 25 0 5 3 10 4 15 2-5 6-11 5-17 2-8-5-14-9-23-4Z"/>
+  </g>
+  <g fill="#8D6A2B" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="153" y="31" font-size="24" letter-spacing="2.7">AUREMET</text>
+    <text x="153" y="50" font-size="13" letter-spacing="5">LINEN</text>
+  </g>
+</svg>

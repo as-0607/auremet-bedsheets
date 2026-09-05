@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
-import brandLogo from "../assets/auremet-linen-logo.png";
+import brandLogo from "../assets/auremet-logo-official-header.png";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
   const [open, setOpen] = useState(false);
   const a_style =
-    "whitespace-nowrap text-[13px] tracking-[1.5px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]";
+    "whitespace-nowrap text-[13px] tracking-[1.5px] text-[#667085] transition-colors duration-300 hover:text-[#A77A2E]";
   const linkobj = [
     { destination: "/", title: t("nav.home") },
     { destination: "/products", title: t("nav.products") },
@@ -39,14 +39,14 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-[1600px] px-6 xl:px-10">
-        <div className="flex h-20 items-center justify-between gap-6">
+        <div className="flex h-20 items-center justify-between gap-3 sm:gap-6">
           {/* Logo — pinned to the far left, never shrinks */}
           <Link
             to="/"
             onClick={() => setOpen(false)}
             className="flex shrink-0 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8d6a2b]"
           >
-            <img src={brandLogo} alt="Auremet Linen — Home" width="1536" height="1024" className="block h-[72px] w-[108px] object-contain mix-blend-multiply" fetchPriority="high" />
+            <img src={brandLogo} alt="Auremet Linen — Home" width="1458" height="389" className="block h-auto max-h-[70px] w-[150px] object-contain sm:w-[190px] lg:w-[210px]" fetchPriority="high" />
           </Link>
 
           {/* Desktop navigation */}
@@ -79,7 +79,7 @@ export default function Navbar() {
 
             <Link
               to="/collections"
-              className="cursor-pointer whitespace-nowrap rounded-full border-0 bg-[#b18a42] px-6 py-3 text-[13px] tracking-[1.5px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
+              className="cursor-pointer whitespace-nowrap rounded-full border-0 bg-[#A77A2E] px-6 py-3 text-[13px] tracking-[1.5px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
             >
               {t("nav.buy_now")}
             </Link>
@@ -130,15 +130,15 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="text-sm tracking-[2px] text-gray-500 transition-colors duration-300 hover:text-[#a46c19]"
                 >
-                  LOGIN
+                  {t("nav.login")}
                 </Link>
 
                 <Link
                   to="/collections"
                   onClick={() => setOpen(false)}
-                  className="cursor-pointer rounded-full border-0 bg-[#b18a42] px-[25px] py-[15px] text-[14px] tracking-[2px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
+                  className="cursor-pointer rounded-full border-0 bg-[#A77A2E] px-[25px] py-[15px] text-[14px] tracking-[2px] text-gray-100 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#8d6a2b]"
                 >
-                  SHOP NOW
+                  {t("nav.buy_now")}
                 </Link>
               </div>
             </div>
