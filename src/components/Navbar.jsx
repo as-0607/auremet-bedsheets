@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
+import brandLogo from "../assets/auremet-linen-logo.png";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -42,14 +43,10 @@ export default function Navbar() {
           {/* Logo — pinned to the far left, never shrinks */}
           <Link
             to="/"
-            className="flex shrink-0 items-end gap-2"
+            onClick={() => setOpen(false)}
+            className="flex shrink-0 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8d6a2b]"
           >
-            <h1 className="font-['Cormorant_Garamond'] font-bold text-[24px] tracking-[6px] text-[#8d6a2b] leading-none whitespace-nowrap">
-              AUREMET
-            </h1>
-            <p className="mb-[1px] text-[11px] tracking-[3px] text-[#b18a42] hidden sm:inline whitespace-nowrap">
-              LINEN
-            </p>
+            <img src={brandLogo} alt="Auremet Linen — Home" width="1536" height="1024" className="block h-[72px] w-[108px] object-contain mix-blend-multiply" fetchPriority="high" />
           </Link>
 
           {/* Desktop navigation */}

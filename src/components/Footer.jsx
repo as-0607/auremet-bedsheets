@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import brandLogo from "../assets/auremet-linen-logo.png";
 import {
   FaInstagram,
   FaFacebookF,
@@ -19,9 +20,9 @@ export default function Footer() {
           
           {/* Brand */}
           <div>
-            <h2 className="font-['Cormorant_Garamond'] text-[24px] tracking-[0.22em] text-[#b58a3f]">
-              {t("footer.brand")}
-            </h2>
+            <Link to="/" className="block w-full max-w-[240px] rounded-xl border border-[#b58a3f]/40 bg-[#f4eadc] p-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b58a3f]">
+              <img src={brandLogo} alt="Auremet Linen — Pure luxury. Timeless rest." width="1536" height="1024" loading="lazy" className="block h-auto w-full mix-blend-multiply" />
+            </Link>
 
             <p className="mt-5 max-w-[330px] leading-[1.5] text-[#b9aa98]">
               {t("footer.description")}
